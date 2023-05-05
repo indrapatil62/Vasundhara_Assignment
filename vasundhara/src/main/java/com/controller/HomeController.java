@@ -21,13 +21,14 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/saveData", method = RequestMethod.POST)
-	public String savaData(@ModelAttribute Login login ) {
+	public String savaData(@ModelAttribute Login login ,Model m) {
 		
 		if(login.getUsername().equals("Admin") || login.getPassword().equals("pass123")) {
 		System.out.println("Data Add Successfully");
 		
 		return "success";
 	}else {
+		m.addAttribute("msg", "Incorrect Login Details");
 		return "index";
 		
 	}

@@ -9,7 +9,7 @@
 
 </head>
 <body>
-
+<h3 align="center" class="text-success text-center"  style="background-color:red;color:white;width:150px">${msg}</h3>
   <div class="container mt-5 w-75">
     <div class="row">
       <div class="col-md-6 offset-md-3">
